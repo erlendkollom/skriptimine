@@ -3,8 +3,7 @@ echo -n "Sisesta reisijate arv bussis: "
 read reisijate_arv
 echo -n "Seisesta kohtade arv bussis: "
 read kohtade_arv
-maha_j22nud=`expr $reisijate_arv - $kohtade_arv`
-echo  $maha_j22nud
-echo -n "Jäi maha 
-"
+t2idetud=`expr $reisijate_arv / $kohtade_arv`
+maha=`expr $reisijate_arv - $t2idetud \* $kohtade_arv`
+echo "Täidetud busse  on $t2idetud" ja "Mahajäänud inimesi on $maha"
 
