@@ -1,0 +1,5 @@
+#!/bin/bash
+
+date +"Today is %A, %B %m, %Y"
+date +"Time is %R"
+cal
