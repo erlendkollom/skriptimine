@@ -9,6 +9,6 @@ read c
 #
 #
 p=`echo "scale=2; ($a+$b+$c) /2" | bc -l` 
-s=`echo "scale=2; ($p*($p-a)*($p-b)*($p-$c))" | bc -l`
+s=`echo "scale=2; sqrt  ($p*($p-a)*($p-b)*($p-$c))" | bc -l`
 echo "Kolmnurga pindala on: "
 echo $s
