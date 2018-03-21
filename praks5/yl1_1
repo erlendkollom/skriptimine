@@ -1,13 +1,5 @@
 #!/bin/bash
 
-echo -n "Sisesta esimese kaateti väärtus: "
-read esimene_kaatet
-echo -n "Siessta teise kaateti väärtus: "
-read teine_kaatet
-#
-hypotenuus=`expr $esimene_kaatet \* $esimene_kaatet + $teine_kaatet \* $teine_kaatet`
-
-echo sqrt "($hypotenuus)" | bc -l
-#
-#
-#
+echo -n "Sisesta küljed a ja b: "
+read a b
+echo sqrt "($a * $a + $b * $b)" | bc -l
