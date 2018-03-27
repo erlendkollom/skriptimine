@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo -n "Kohtade arv bussis: "
+read kohad
+echo -n "Sisesta reisijate arv: "
+read reisijad
+
+busside_arv=$(( $reisijad / $kohad ))
+ei_mahtunud=$(( $reisijad % $kohad ))
+
+if [ $ei_mahtunud -gt 0 ]; then
+	busside_arv=$(($busside_arv + 1))
+fi
+echo "Kokku läheb vaja $busside_arv bussi"
+
+
