@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo -n "Sisesta täisarv: "
+read numbrid
+summa=0
+if [ $numbrid -lt 0 ]; then
+	numbrid=$(($numbrid * -1))
+fi
+while [ $numbrid -gt 0 ]
+do
+	arv=$(($numbrid % 10))
+	numbrid=$(($numbrid / 10))
+	summa=$(($summa + $arv))
+done
+echo "Summa on $summa"
+
+
